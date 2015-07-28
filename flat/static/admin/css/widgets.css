@@ -36,6 +36,15 @@
     color: #666;
 }
 
+.selector h2 .fa-question-circle {
+    font-size: 13px;
+    margin-left: 2px;
+}
+
+.selector-chosen h2 .fa-question-circle {
+    color: #eee;
+}
+
 .selector .selector-filter {
     background: white;
     border: 1px solid #ccc;
@@ -54,6 +63,11 @@
     width: 16px;
     padding: 0 2px;
     line-height: 1;
+}
+
+.selector .selector-filter label .fa-search,
+.inline-group .aligned .selector .selector-filter label .fa-search {
+    vertical-align: -3px;
 }
 
 .selector .selector-available input {
@@ -86,38 +100,25 @@
     width: 16px;
     height: 16px;
     display: block;
-    text-indent: -3000px;
+    text-align: center;
     overflow: hidden;
-}
-
-.selector-add {
-    background: url(../img/selector-icons.gif) 0 -161px no-repeat;
-    cursor: default;
-    margin-bottom: 2px;
-}
-
-.active.selector-add {
-    background: url(../img/selector-icons.gif) 0 -187px no-repeat;
-    cursor: pointer;
-}
-
-.selector-remove {
-    background: url(../img/selector-icons.gif) 0 -109px no-repeat;
     cursor: default;
 }
 
-.active.selector-remove {
-    background: url(../img/selector-icons.gif) 0 -135px no-repeat;
+.selector-add.active, .selector-remove.active {
     cursor: pointer;
 }
+
 
 a.selector-chooseall, a.selector-clearall {
+    position: relative;
     display: inline-block;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold;
     color: #666;
+    cursor: default;
 }
 
 a.selector-chooseall {
@@ -128,29 +129,16 @@ a.selector-clearall {
     padding: 1px 0 3px 18px;
 }
 
-a.active.selector-chooseall:hover, a.active.selector-clearall:hover {
+a.active.selector-clearall:hover,
+a.active.selector-chooseall:hover {
     color: #036;
 }
 
-a.selector-chooseall {
-    background: url(../img/selector-icons.gif) right -263px no-repeat;
-    cursor: default;
-}
-
+a.active.selector-clearall,
 a.active.selector-chooseall {
-    background: url(../img/selector-icons.gif) right -289px no-repeat;
     cursor: pointer;
 }
 
-a.selector-clearall {
-    background: url(../img/selector-icons.gif) left -211px no-repeat;
-    cursor: default;
-}
-
-a.active.selector-clearall {
-    background: url(../img/selector-icons.gif) left -237px no-repeat;
-    cursor: pointer;
-}
 
 /* STACKED SELECTORS */
 
@@ -193,31 +181,20 @@ a.active.selector-clearall {
     display: none;
 }
 
-.stacked .selector-add {
-    background: url(../img/selector-icons.gif) 0 -57px no-repeat;
+.stacked .selector-add, .stacked .selector-remove {
     cursor: default;
 }
 
-.stacked .active.selector-add {
-    background: url(../img/selector-icons.gif) 0 -83px no-repeat;
+.stacked .active.selector-add, .stacked .active.selector-remove {
     cursor: pointer;
 }
 
-.stacked .selector-remove {
-    background: url(../img/selector-icons.gif) 0 -5px no-repeat;
-    cursor: default;
-}
 
-.stacked .active.selector-remove {
-    background: url(../img/selector-icons.gif) 0 -31px no-repeat;
-    cursor: pointer;
-}
-
-.selector .help-icon {
+/*.selector .help-icon {
     background: url(../img/icon-unknown.gif) no-repeat;
     display: inline-block;
-    height: 10px;
-    width: 10px;
+    height: 12px;
+    width: 12px;
     vertical-align: middle;
 }
 
@@ -226,7 +203,7 @@ a.active.selector-clearall {
     display: inline-block;
     height: 18px;
     width: 18px;
-}
+}*/
 
 /* DATE AND TIME */
 
@@ -247,8 +224,9 @@ form .form-row p.datetime {
 
 .datetime span {
     white-space: nowrap;
+    vertical-align: 0;
     font-weight: normal;
-    font-size: 11px;
+    font-size: 12px;
     color: #ccc;
 }
 
@@ -264,6 +242,10 @@ table p.datetime {
     padding-left: 0;
 }
 
+.datetimeshortcuts {
+    vertical-align: middle;
+}
+
 .datetimeshortcuts .clock-icon, .datetimeshortcuts .date-icon {
     background: none no-repeat;
     display: inline-block;
@@ -272,13 +254,18 @@ table p.datetime {
     vertical-align: middle;
 }
 
-.datetimeshortcuts .clock-icon {
+.timezonewarning {
+    font-size: 12px;
+    color: #ccc;
+}
+
+/*.datetimeshortcuts .clock-icon {
     background-image: url(../img/icon_clock.gif);
 }
 
 .datetimeshortcuts .date-icon {
     background-image: url(../img/icon_calendar.gif);
-}
+}*/
 
 /* URL */
 
@@ -496,7 +483,7 @@ ul.timelist, .timelist li {
 
 /* INLINE ORDERER */
 
-ul.orderer {
+/*ul.orderer {
     position: relative;
     padding: 0 !important;
     margin: 0 !important;
@@ -557,17 +544,17 @@ ul.orderer li.deleted .inline-deletelink {
 
 ul.orderer li.deleted:hover, ul.orderer li.deleted a.selector:hover {
     cursor: default;
-}
+}*/
 
 /* EDIT INLINE */
 
 .inline-deletelink {
     float: right;
+    position: relative;
     text-indent: -9999px;
-    background: transparent url(../img/inline-delete.png) no-repeat;
-    width: 15px;
-    height: 15px;
-    border: 0px none;
+    width: 16px;
+    height: 16px;
+    border: 0 none;
     outline: 0; /* Remove dotted border around link */
 }
 
@@ -576,7 +563,7 @@ ul.orderer li.deleted:hover, ul.orderer li.deleted a.selector:hover {
     cursor: pointer;
 }
 
-.editinline button.addlink {
+/*.editinline button.addlink {
     border: 0px none;
     color: #5b80b2;
     font-size: 100%;
@@ -616,11 +603,11 @@ ul.orderer li.deleted:hover, ul.orderer li.deleted a.selector:hover {
 
 .editinline tr.deleted td:first-child {
     background-image: none !important;
-}
+}*/
 
 /* EDIT INLINE - STACKED */
 
-.editinline-stacked {
+/*.editinline-stacked {
     min-width: 758px;
 }
 
@@ -648,7 +635,7 @@ ul.orderer li.deleted:hover, ul.orderer li.deleted a.selector:hover {
     padding: 3px 4px;
     font-size: 11px;
     border-top: 1px solid #ddd;
-}
+}*/
 
 /* RELATED WIDGET WRAPPER */
 .related-widget-wrapper {

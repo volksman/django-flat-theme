@@ -37,7 +37,7 @@
 }
 
 #changelist .toplinks {
-    border-bottom: 1px solid #ccc !important;
+    border-bottom: 1px solid #ddd !important;
 }
 
 #changelist .paginator {
@@ -105,7 +105,8 @@
     padding: 2px 10px;
     margin: 0;
     vertical-align: -1px;
-    background: #fff url(../img/nav-bg.gif) bottom repeat-x;
+    background: #fff;
+    box-shadow: 0 -15px 20px -10px rgba(0, 0, 0, 0.15) inset;
     cursor: pointer;
     color: #333;
 }
@@ -114,9 +115,8 @@
     border-color: #999;
 }
 
-#changelist #changelist-search img {
-    vertical-align: middle;
-    margin-right: 4px;
+#changelist #changelist-search .fa-search {
+    margin-right: 5px;
 }
 
 /* FILTER COLUMN */
@@ -189,8 +189,6 @@
 
 .change-list ul.toplinks {
     display: block;
-    background: white url(../img/nav-bg-reverse.gif) 0 -10px repeat-x;
-    border-top: 1px solid white;
     float: left;
     padding: 0 !important;
     margin: 0 !important;
@@ -325,7 +323,8 @@
     font-size: 13px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background: #fff url(../img/nav-bg.gif) bottom repeat-x;
+    background: #fff;
+    box-shadow: 0 -15px 20px -10px rgba(0, 0, 0, 0.15) inset;
     cursor: pointer;
     height: 24px;
     line-height: 1;
