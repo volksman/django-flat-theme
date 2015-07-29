@@ -5,13 +5,12 @@ Description
 -----------
 
 **django-flat-theme** brings fresh air to the default Django Admin
-interface which hasn't changed 10 years from the very first version of
+interface which hasn't changed about 10 years from the very first version of
 Django framework. This theme just makes UI modern and clean.
 
-This app just overrides default admin's CSS. All changes are about
-colors, margins, sizes. Nothing major.
+This app overrides default admin's CSS. All changes are about colors,
+margins, sizes and icons. Nothing major.
 
-**There are no markup changes**.
 
 Installation
 ------------
@@ -36,9 +35,7 @@ Install via pip:
 Compatibility
 ~~~~~~~~~~~~~
 
-Works correct in Django 1.6+. Older Django versions use a slightly
-different way to show icons, so it requires changing markup or adding
-python logic to make this theme compatible.
+Works correct in Django 1.5+.
 
 Font
 ~~~~
@@ -46,12 +43,19 @@ Font
 This theme uses `Roboto <http://www.google.com/fonts/specimen/Roboto>`__
 font which is under Apache 2.0 licence.
 
+Image icons were replaced with `Font Awesome <http://fortawesome.github.io/Font-Awesome/>`__
+iconic font which is under GPL licence.
+
+
 Testing
 ~~~~~~~
 
-Tested in: - IE7+ (IE7 and IE8 are OK in terms of graceful degradation)
-- FF30+ (Windows, Ubuntu, OSX) - Chrome 35+ (Windows, Ubuntu, OSX) -
-Safari 8 (OSX)
+Tested in:
+
+- IE8+ (looks OK in IE8 in terms of graceful degradation)
+- FF30+ (Windows, Ubuntu, OSX)
+- Chrome 35+ (Windows, Ubuntu, OSX)
+- Safari 8 (OSX)
 
 Screenshot Examples
 ~~~~~~~~~~~~~~~~~~~
