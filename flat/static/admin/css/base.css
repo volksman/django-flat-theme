@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 14px;
-    font-family: "Roboto", "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
     color: #333;
     background: #fff;
 }
@@ -356,7 +356,6 @@ table thead th.sorted .sortoptions {
     padding: 8px 10px 0 5px;
     float: right;
     text-align: right;
-    color: #999;
 }
 
 table thead th.sorted .sortpriority {
@@ -374,9 +373,13 @@ table thead th.sorted .sortoptions a {
     color: #999;
 }
 
+table thead th.sorted .sortoptions a:hover {
+    color: #447e9b;
+}
+
 /* ORDERABLE TABLES */
 
-/*table.orderable tbody tr td:hover {
+table.orderable tbody tr td:hover {
     cursor: move;
 }
 
@@ -388,7 +391,7 @@ table.orderable tbody tr td:first-child {
 
 table.orderable-initalized .order-cell, body>tr>td.order-cell {
     display: none;
-}*/
+}
 
 /* FORM DEFAULTS */
 
@@ -405,8 +408,8 @@ textarea {
     vertical-align: top !important;
 }
 
-input[type=text], input[type=password], input[type=email], input[type=url], input[type=number],
-textarea, select, .vTextField {
+input[type=text], input[type=password], input[type=email], input[type=url],
+input[type=number], textarea, select, .vTextField {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 5px 6px;
@@ -414,8 +417,9 @@ textarea, select, .vTextField {
     outline: none;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, input[type=number]:focus,
-textarea:focus, select:focus, .vTextField:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus,
+input[type=url]:focus, input[type=number]:focus, textarea:focus, select:focus,
+.vTextField:focus {
     border-color: #999;
 }
 
@@ -464,7 +468,9 @@ a.button {
     background: #205067;
 }
 
-.button[disabled].default, input[type=submit][disabled].default, input[type=button][disabled].default {
+.button[disabled].default,
+input[type=submit][disabled].default,
+input[type=button][disabled].default {
     opacity: 0.4;
 }
 
@@ -527,7 +533,7 @@ ul.messagelist li {
     display: block;
     font-weight: 400;
     font-size: 13px;
-    padding: 10px 10px 10px 65px;
+    padding: 10px 10px 10px 60px;
     margin: 0 0 10px 0;
     background: #dfd;
     color: #333;
@@ -641,16 +647,9 @@ div.breadcrumbs a:hover {
 
 /* ACTION ICONS */
 
-.addlink, .deletelink, .changelink, .inlinechangelink {
+.iconlink {
+    position: relative;
     padding-left: 16px;
-}
-
-a.deletelink:link, a.deletelink:visited {
-    color: #CC3434;
-}
-
-a.deletelink:hover {
-    color: #993333;
 }
 
 /* OBJECT TOOLS */
@@ -699,11 +698,9 @@ a.deletelink:hover {
     background-color: #417690;
 }
 
-.object-tools a.addlink, .object-tools a.golink, .object-tools a.viewsitelink {
-    background: #999;
+.object-tools a.iconlink {
     padding-right: 26px;
 }
-
 
 /* OBJECT HISTORY */
 

@@ -7,6 +7,7 @@
             data-href-template="{{ change_related_template_url }}?{{ url_params }}"
             title="{% blocktrans %}Change selected {{ model }}{% endblocktrans %}">
             <i class="fa fa-pencil"></i>
+        </a>
         {% endif %}
         {% if can_add_related %}
         <a class="related-widget-wrapper-link add-related" id="add_id_{{ name }}"
