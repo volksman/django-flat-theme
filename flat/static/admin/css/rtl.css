@@ -85,8 +85,8 @@ table thead th.sorted .sortoptions {
 }
 
 thead th.sorted .text {
-	padding-right: 0;
-	padding-left: 42px;
+    padding-right: 0;
+    padding-left: 42px;
 }
 
 /* dashboard styles */
@@ -153,11 +153,6 @@ thead th.sorted .text {
 
 .submit-row p.deletelink-box {
     float: right;
-}
-
-.submit-row .deletelink {
-    background: url(../img/icon_deletelink.gif) 0 50% no-repeat;
-    padding-right: 14px;
 }
 
 .submit-row input.default {
